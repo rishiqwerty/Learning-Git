@@ -255,7 +255,7 @@ $ awk '{ print $2 $1 $3 }' text.txt
 ```
 
 
-  We can even print custom text using "Double qoutes"
+  We can even print custom text using "Double quotes"
 ```
 $ awk '{ print "The first field:", $1}' text.txt
   The first field: 10
