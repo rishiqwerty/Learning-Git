@@ -230,6 +230,68 @@ $ awk '{ print $2, $1, $3 }' text.txt
   Sharma Rohit 264
   MS 7 Dhoni
   RTX Nvidia 3090
-
 ```
-If you don't use separators and put space instead, then there will be no space between the item
+
+If we don't use separators and put space instead, then there will be no space between the item
+```
+$ awk '{ print $2 $1 $3 }' text.txt
+  Sachin10Tendulkar
+  worldHelloUbuntu
+  Rishav131
+  January
+  333
+  RyzenMKBHD4800H
+  MaxM1
+  HubGit2021
+  2November
+  HayabusaSUzuki
+  SharmaRohit264
+  MS7Dhoni
+  RTXNvidia3090
+```
+
+
+We can even print custom text using "Double qoutes"
+```
+$ awk '{ print "The first field:", $1}' text.txt
+  The first field: 10
+  The first field: Hello
+  The first field: 13
+  The first field: January
+  The first field: 333
+  The first field: MKBHD
+  The first field: M1
+  The first field: Git
+  The first field: November
+  The first field: SUzuki
+  The first field: Rohit
+  The first field: 7
+  The first field: Nvidia
+```
+
+Awk also use printf statement which provide similar print format as in C programming.
+```
+awk '{ printf "%d %s \n", NR, $0 }' text.txt
+1 10 Sachin Tendulkar 200 
+2 Hello world Ubuntu 20 
+3 13 Rishav 1 
+4 January 
+5 333 
+6 MKBHD Ryzen 4800H 
+7 M1 Max  
+8 Git Hub 2021 
+9 November 2 
+10 SUzuki Hayabusa 
+11 Rohit Sharma 264 
+12 7 MS Dhoni 183 
+13 Nvidia RTX 3090 Ti 12GB 
+```
+
+Awk can even use loops in awk
+```
+$ awk 'BEGIN { i = 1; while (i < 5) { print "Square of", i, "is", i*i; ++i } }'
+  Square of 1 is 1
+  Square of 2 is 4
+  Square of 3 is 9
+  Square of 4 is 16
+```
