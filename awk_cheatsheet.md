@@ -8,19 +8,19 @@ $ awk '<Pattern> {<Action>}' FileName
 Let's first display the text file where we will be working on:
 ```
 $ awk '{print}' text.txt
-10 Sachin Tendulkar 200
-Hello world Ubuntu 20
-13 Rishav 1
-January
-333
-MKBHD Ryzen 4800H
-M1 Max 
-Git Hub 2021
-November 2
-SUzuki Hayabusa
-Rohit Sharma 264
-7 MS Dhoni 183
-Nvidia RTX 3090 Ti 12GB
+  10 Sachin Tendulkar 200
+  Hello world Ubuntu 20
+  13 Rishav 1
+  January
+  333
+  MKBHD Ryzen 4800H
+  M1 Max 
+  Git Hub 2021
+  November 2
+  SUzuki Hayabusa
+  Rohit Sharma 264
+  7 MS Dhoni 183
+  Nvidia RTX 3090 Ti 12GB
 
 ```
 ## Lets see a some basic example:
@@ -29,7 +29,7 @@ Nvidia RTX 3090 Ti 12GB
   
 ```
 $ awk '/Sachin/ {print}' text.txt
-10 Sachin Tendulkar 200
+  10 Sachin Tendulkar 200
 ```
   We can also print the particular column we can just put $ followed by 1,2,3 as per the column number:
 ```
