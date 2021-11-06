@@ -144,8 +144,8 @@ $ awk '$1 == 434, $1 == 320 { print $1 }' sum.txt
   320
 ```
 - ### Special Pattern
-AWK include some sepecial pattern like BEGIN and END.
-BEGIN- is used to perform action before data are processed.
+**AWK include some sepecial pattern like BEGIN and END.**  
+BEGIN- is used to perform action before data are processed.  
 END-  is used to perform action after data are processed.
 ```
 $ awk 'BEGIN{print "Some random data:"}; {print}' text.txt
