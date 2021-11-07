@@ -24,7 +24,7 @@ $ awk '{print}' text.txt
   Nvidia RTX 3090 Ti 12GB
 
 ```
-## Lets see a some basic example:
+## Lets see some basic example:
 - ### Searching some pattern in text file:
 Searching Sachin in text.txt file
   
