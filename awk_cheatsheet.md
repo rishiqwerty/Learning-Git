@@ -33,7 +33,7 @@ $ awk '/Sachin/ {print}' text.txt
   10 Sachin Tendulkar 200
 ```
 
-We can also print the particular column we can just put $ followed by 1,2,3... as per the column number:
+We can also print particular column, just put $ followed by 1,2,3... as per the column number:
 ```
 $ awk '{print $1 }' text.txt
   10
