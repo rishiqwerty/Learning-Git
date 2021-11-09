@@ -11,6 +11,7 @@ Investigate Elasticsearch, Solr, and Lucene.
    It is a technology suitable for nearly any application that requires full-text search, especially cross-platform.
 
 __Performance fix__:
+ - Firstly, check for update for all the softwares, as with every update companies brings various bug fixes and performance improvements.
  - Elasticsearch needs a healthy amount of cache, disk space, RAM also needs a powerful CPU. So first up we will check for all these hardware
    issues. If there is anything which affects the performance we will either change it or increase its quantity. Also if the system is still  
    using a mechanical hardware drive, it should be replaced with SSDs.
@@ -18,4 +19,10 @@ __Performance fix__:
    on a particular node. To do this we use load balancing. Load balancing distributes the load to multiple nodes, which reduces the load on 
    each node, thus increasing performance. To enable load balancing is quite easy, we just need to configure node as coordinating only node, 
    which will enable smart load balancing.
- - 
+ - Increase the size of index buffer, if the buffer is getting full before  its document are written on disk.
+ - If the request rate is high, scale up your install by adding additional copies of index and additional servers.
+ - If the index is updating frequently, we can designate shards to spread the indexing load evenly across all nodes. We can add one, two or more shard per node depending on CPU and disk bandwidth on nodes.
+ - Increase the refresh interval depending on indexing period.
+ - Check if Lucene is using enough threads to fully utilize the computer's hardware. Increase the thread count until throughput no longer improves, also keep latency in check.
+ - Configure filter cache. filter cache allows to control over how filter queries are handeled in order to maximize performance.
+If the performance is still sluggish even after performing these many checks then we should consider looking out for some other databases.
